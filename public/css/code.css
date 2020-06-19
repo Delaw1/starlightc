@@ -1,0 +1,106 @@
+    .white {
+        color: white
+    }
+    
+    .gray {
+        background: #f8f9fa;
+        border: none;
+        border-radius: 13px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .hr {
+        border-top: 1px solid white
+    }
+    
+    .end {
+        text-align: end
+    }
+    
+    .size {
+        font-size: 25px;
+    }
+    
+    .size-15 {
+        font-size: 20px;
+    }
+    
+    .times {
+        font-size: 25px;
+        cursor: pointer;
+    }
+    
+    .times a:link,
+    .times a:visited {
+        color: red;
+    }
+    
+    .hidden {
+        visibility: hidden;
+    }
+    
+    .pointer {
+        cursor: pointer;
+    }
+    /* Profile sidebar22 */
+    
+    .sidebar2 {
+        margin: 0;
+        padding: 0;
+        /* width: 200px; */
+        background-color: #f1f1f1;
+        /* position: fixed; */
+        height: 100%;
+        /* overflow: auto; */
+    }
+    
+    .sidebar2 a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+    }
+    
+    .sidebar2 a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    .sidebar2 a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+    
+    div.content2 {
+        margin-left: 200px;
+        padding: 1px 16px;
+        height: 1000px;
+    }
+    
+    @media screen and (max-width: 700px) {
+        .sidebar2 {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        .sidebar2 a {
+            float: left;
+        }
+        div.content2 {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+        .sidebar2 a {
+            text-align: center;
+            float: none;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .end {
+            text-align: left;
+        }
+    }
