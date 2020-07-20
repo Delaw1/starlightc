@@ -9,15 +9,16 @@ use App\Order;
 use App\Workerstat;
 use App\User;
 use App\Withdrawal;
+use App\Feedback;
 use Stripe\Stripe;
 use Stripe\Customer;
 use Stripe\Charge;
 use Illuminate\Pagination\LengthAwarePaginator as Paginator;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MyMail;
 use Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 use function GuzzleHttp\Promise\queue;
 
@@ -89,7 +90,7 @@ class HomeController extends Controller
     public function cart(Request $request)
     {
         $carts = Cart::where('user_id', Auth()->user()->id)->get();
-        if (count($carts) == 0) {
+        if (count($carts) == 0) { 
             return view('pages.cart', ['carts' => $carts, 'id' => 1]);
         }
         $total_price = 0;
@@ -100,33 +101,33 @@ class HomeController extends Controller
         }
         $total_price = $total_price * 100;
 
-        $product = \Stripe\Product::create([
-            'name' => $carts[0]->title,
-        ]);
+        // $product = \Stripe\Product::create([
+        //     'name' => $carts[0]->title,
+        // ]);
 
-        $price = \Stripe\Price::create([
-            'product' => $product->id,
-            'unit_amount' => $total_price,
-            'currency' => 'usd',
-        ]);
+        // $price = \Stripe\Price::create([
+        //     'product' => $product->id,
+        //     'unit_amount' => $total_price,
+        //     'currency' => 'usd',
+        // ]);
 
-        $session = \Stripe\Checkout\Session::create([
-            'customer_email' => Auth()->user()->email,
-            'payment_method_types' => ['card'],
-            'line_items' => [[
-                'price' => $price->id,
-                'quantity' => 1,
-            ]],
-            'metadata' => $ids,
-            'mode' => 'payment',
-            'success_url' => 'http://localhost:8000/cart/success?session_id={CHECKOUT_SESSION_ID}',
-            'cancel_url' => 'http://localhost:8000/cart?error=cancelled',
-        ]);
+        // $session = \Stripe\Checkout\Session::create([
+        //     'customer_email' => Auth()->user()->email,
+        //     'payment_method_types' => ['card'],
+        //     'line_items' => [[
+        //         'price' => $price->id,
+        //         'quantity' => 1,
+        //     ]],
+        //     'metadata' => $ids,
+        //     'mode' => 'payment',
+        //     'success_url' => 'http://localhost:8000/cart/success?session_id={CHECKOUT_SESSION_ID}',
+        //     'cancel_url' => 'http://localhost:8000/cart?error=cancelled',
+        // ]);
 
         if ($request->query('error')) {
-            return view('pages.cart', ['carts' => $carts, 'id' => $session->id, 'error' => 'Payment request cancelled']);
+            return view('pages.cart', ['carts' => $carts, 'error' => 'Payment request cancelled']);
         }
-        return view('pages.cart', ['carts' => $carts, 'id' => $session->id]);
+        return view('pages.cart', ['carts' => $carts]);
     }
 
     public function success(Request $request)
@@ -322,6 +323,40 @@ class HomeController extends Controller
 
         return redirect()->back()->with('success', 'Project successfully completed');
     }
+
+    public function approvePost(Request $request, $id)
+    {
+        feedback::create([
+            'user_id' => Auth::User()->id,
+            'order_id' => $id,
+            'message' => $request->message
+        ]);
+
+        Order::where('id', $id)->update([
+            'completed' => true
+        ]);
+
+        $project = Order::where('id', $id)->first();
+
+        
+        Workerstat::where('user_id', $project->writer_id)->update([
+            'current' => false,
+            'submitted' => false,
+            'order_id' => null
+        ]);
+
+        // $subject = "Completed";
+        // $view = 'emails.writercompleted';
+        // $mail = new MyMail($subject, $project, $view);
+        // Mail::to($project->writer->email)->send($mail);
+
+        // $view = 'emails.usercompleted';
+        // $mail = new MyMail($subject, $project, $view);
+        // Mail::to($project->user->email)->send($mail);
+
+        return redirect()->back()->with('success', 'Project successfully completed');
+    }
+
 
     public function profile()
     {

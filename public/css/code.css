@@ -78,6 +78,60 @@
         height: 1000px;
     }
     
+    #regMobile {
+         visibility: hidden;   
+    }
+
+    .refBorder {
+        border: 1px solid #f2184f; 
+        padding: 20px;
+    }
+
+    .textdiv {
+        animation: textgrowth 1s infinite alternate;
+    }
+
+    .cac {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 400px;
+    }
+
+    .neons h3 {
+        font-size: 3rem;
+        /* text-align: center; */
+         /* font-weight: bold; */
+        -webkit-animation: glow 2s ease-in-out infinite alternate;
+        -moz-animation: glow 2s ease-in-out infinite alternate;
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @-webkit-keyframes glow {
+        from {
+         color: #fff;
+       text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+     }
+     
+     to {
+        color: gray;
+       text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+     }
+   }
+    @keyframes textgrowth {
+        0% {
+            /* font-size: 22px; */
+            padding: 20px;
+        }
+        100% {
+            /* font-size:  24px; */
+            padding: 40px;
+        }
+    }
+
+    .saturate { filter: invert(25%) sepia(99%) saturate(6199%) hue-rotate(122deg) brightness(95%) contrast(104%); }
+
     @media screen and (max-width: 700px) {
         .sidebar2 {
             width: 100%;
@@ -97,10 +151,27 @@
             text-align: center;
             float: none;
         }
+        
     }
     
     @media (max-width: 767px) {
         .end {
             text-align: left;
         }
+        #regMobile {
+            visibility: visible;
+        }
+        #logMobile {
+            display: none;
+        }
+
+        .cac {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            height: 400px;
+        }
     }
+
+    

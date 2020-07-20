@@ -52,12 +52,14 @@ function timer(id) {
 }
 
 function copy(str) {
-    const el = document.createElement('textarea')
-    el.value = str
-    document.body.appendChild(el)
+    // var el = document.createElement('textarea')
+    var el = document.querySelector('#copy')
+    // el.value = str
+    // alert(el.value)
+    // document.body.appendChild(el)
     el.select()
     document.execCommand("copy")
-    document.body.removeChild(el);
+    // document.body.removeChild(el);
     // var referral = document.querySelector('#ref')
     // referral.select()
 

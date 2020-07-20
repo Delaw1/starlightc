@@ -31,6 +31,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/custom.css" />
 
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -54,22 +56,28 @@
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><img src="{{ asset('/img/logo.png') }}" width="59px" height="59px" alt="image"></a>
+                @guest
+                <a id="regMobile" class="btn btn-outline-success" href="/register" type="button">Join</a>
+                <a id="regMobile" class="btn btn-outline-success" href="/login" type="button">Login</a>
+                @endguest
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
-                    <img src="{{ asset('/img/signin5.png') }}" width="39px" height="39px" alt="image">
+                    <img src="{{ asset('/img/signin5.png') }}" width="39px" height="39px" alt="image" class="saturate">
                 </button>
+                
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
-                        <li><a class="nav-link active" href="/">Home</a></li>
-                        <li><a class="nav-link" href="/about">About us</a></li>
-                        <li><a class="nav-link" href="/#services">Services</a></li>
+                        <li id="terms"><a class="nav-link active" href="/">Home</a></li>
+                        <li id="terms"><a class="nav-link" href="/about">About us</a></li>
+                        <li id="terms"><a class="nav-link" href="/#services">Services</a></li>
                         @guest
-                        <li><a class="nav-link active" style="background:#f2184f;color:#fff;" href="/register">Sign up</a></li>
-                        <li><a class="nav-link active" style="background:#f2184f;color:#fff;" href="/login">Sign in</a></li>
+                        <li id="logMobile terms"><a class="nav-link active" style="background:#f2184f;color:#fff;" href="/register">Join</a></li>
+                        <li id="logMobile terms"><a class="nav-link active" style="background:#f2184f;color:#fff;" href="/login">Login</a></li>
                         @else
-                        <li><a class="nav-link" href="/cart">Cart</a></li>
-                        <li><a class="nav-link" href="/orders">Orders</a></li>
-                        <li><a class="nav-link" href="/profile">Profile</a></li>
-                        <li><a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <li id="terms"><a class="nav-link" href="/cart">Cart</a></li>
+                        <li id="terms"><a class="nav-link" href="/orders">Orders</a></li>
+                        <li id="terms"><a class="nav-link" href="/profile">Profile</a></li>
+                        <li id="terms"><a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                                 Logout</a></li>
 
@@ -119,8 +127,8 @@
                                 <img src="/images/social2.png">
                             </div>
                             <div class="full white_fonts">
-                                <p>Service@starlightpremiumcontent.com
-                                    <br>Support@starlightpremiumcontent.com</p>
+                                <p>service@starlightc.com
+                                    <br>support@starlightc.com</p>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -134,10 +142,10 @@
                         </div>
                         <div class="col-md-12">
                             <ul class="full social_icon margin-top_20">
-                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li id="terms"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li id="terms"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li id="terms"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li id="terms"><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -148,13 +156,13 @@
                         <div class="col-md-12">
                             <div class="footer_blog footer_menu">
                                 <h3>Menus</h3>
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="/#services">Services</a></li>
-                                    <li><a href="/cart">Cart</a></li>
-                                    <li><a href="/orders">Orders</a></li>
-                                    <li><a href="/profile">Profile</a></li>
+                                <ul id="terms">
+                                    <li id="terms"><a href="#">Home</a></li>
+                                    <li id="terms"><a href="#">About Us</a></li>
+                                    <li id="terms"><a href="/#services">Services</a></li>
+                                    <li id="terms"><a href="/cart">Cart</a></li>
+                                    <li id="terms"><a href="/orders">Orders</a></li>
+                                    <li id="terms"><a href="/profile">Profile</a></li>
                                 </ul>
                             </div>
 
@@ -173,10 +181,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="crp">© 2020. All Rights Reserved.</p>
+                    <p class="crp">© 2020. All Rights Reserved.</p> 
                     <ul class="bottom_menu">
-                        <li><a href="#">Term of Service</a></li>
-                        <li><a href="/privacy">Privacy</a></li>
+                        <li id="terms"><a href="/term_of_service">Term of Service</a></li>
+                        <li id="terms"><a href="/privacy">Privacy</a></li>
                     </ul>
                 </div>
             </div>

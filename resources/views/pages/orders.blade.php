@@ -33,7 +33,7 @@
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show {{ $active_unassigned }}" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         @if(count($orders) != 0)
-                        @foreach($orders as $order) 
+                        @foreach($orders as $order)
                         <div class="card gray pointer" onclick="redirect('/orders/{{$order['id']}}')">
                             <div class="card-body">
                                 <div class="row">
@@ -118,16 +118,17 @@
                                     </div>
                                     <div class="col-sm-6 end">
                                         <strong class="end">TimeFrame: {{$order['timeframe']}} hours</strong>
-                                        <a href="/approve/{{$order['id']}}" class="btn btn-info">Approve</a>
+                                        <!-- <a href="/approve/{{$order['id']}}" class="btn btn-info">Approve</a> -->
+                                        <button data-toggle="modal" data-target="#myModal" class="btn btn-info">Approve</button>
                                         <a href="/storage/{{$order['filepath']}}" download="{{$order['title']}}"><i class="fa fa-download"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         @endforeach
-                        {{ $completed->links() }}
+                        {{ $submitted->links() }}
                         @else
-                        <div class="layout_padding" >
+                        <div class="layout_padding">
                             <h3>No Project Awaiting approval</h3>
                         </div>
                         @endif
@@ -138,8 +139,11 @@
                         <div class="card gray pointer" onclick="">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-10">
+                                    <div class="col-md-9">
                                         <h2 class="card-title">{{$order['title']}}</h2>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a style="color:blueviolet">Submit Review</a>
                                     </div>
                                 </div>
 
@@ -159,7 +163,7 @@
                             </div>
                         </div>
                         @endforeach
-                        {{ $completed->links() }}
+                        <!-- {{ $completed->links() }} -->
                         @else
                         <div class="layout_padding">
                             <h3>No completed order</h3>
@@ -172,6 +176,29 @@
             <div class="col-md-5">
 
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Feedback</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="/approve/{{$order['id']}}">
+            {{ csrf_field() }}
+                <div class="modal-body">
+                    <textarea class="form-control" name="message" required autofocus></textarea>
+                </div>
+                <div class="modal-footer">
+                    <a href="/approve/{{$order['id']}}" class="btn btn-secondary">Approve</a>
+                    <button type="submit" class="btn btn-primary">Submit and Approve</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

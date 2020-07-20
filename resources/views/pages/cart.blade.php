@@ -84,43 +84,14 @@ foreach ($carts as $cart) {
                                 <p class="size">${{$total_price}}</p>
                             </div>
                         </div>
-                        <a class="btn btn-success btn-lg btn-block payment" role="button">Proceed to checkout</a>
+                        
+                        <a class="btn btn-success btn-lg btn-block" href="/paynow" role="button">Proceed to checkout</a>
                     </div>
                 </div>
             </div>
 
         <br />
         <law />
-
-            <form method="POST" action="{{ route('pay') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
-                <div class="row" style="margin-bottom:40px;">
-                    <div class="col-md-8 col-md-offset-2">
-                        <p>
-                            <div>
-                                Lagos Eyo Print Tee Shirt
-                                ₦ 2,950
-                            </div>
-                        </p>
-                        <input type="hidden" name="email" value="otemuyiwa@gmail.com"> {{-- required --}}
-                        <input type="hidden" name="orderID" value="345">
-                        <input type="hidden" name="amount" value="800"> {{-- required in kobo --}}
-                        <input type="hidden" name="quantity" value="3">
-                        <input type="hidden" name="currency" value="NGN">
-                        <input type="hidden" name="metadata" value="{{ json_encode($array = ['key_name' => 'value',]) }}"> {{-- For other necessary things you want to add to your payload. it is optional though --}}
-                        <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
-                        {{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
-
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
-
-
-                        <p>
-                            <button class="btn btn-success btn-lg btn-block" type="submit" value="Pay Now!">
-                                <i class="fa fa-plus-circle fa-lg"></i> Pay Now!
-                            </button>
-                        </p>
-                    </div>
-                </div>
-            </form>
 
             @else
             <div>
@@ -134,20 +105,5 @@ foreach ($carts as $cart) {
 @endsection
 
 @section('scripts')
-<script src="https://js.stripe.com/v3/"></script>
-<script>
-    var stripe = Stripe('pk_test_EQnbVSlCLwFuYy2tHssHcQd200TAc3cQ47');
-    $('.payment').on('click', function() {
-        stripe.redirectToCheckout({
-            // Make the id field from the Checkout Session creation API response
-            // available to this file, so you can provide it as parameter here
-            // instead of the placeholder.
-            sessionId: '{{$id}}'
-        }).then(function(result) {
-            // If `redirectToCheckout` fails due to a browser or network
-            // error, display the localized error message to your customer
-            // using `result.error.message`.
-        });
-    })
-</script>
+
 @endsection

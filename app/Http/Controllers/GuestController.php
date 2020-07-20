@@ -10,7 +10,8 @@ use App\Workerstat;
 use App\User;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MyMail;
-
+use App\Feedback;
+use App\Executive;
 
 class GuestController extends Controller
 {
@@ -21,8 +22,10 @@ class GuestController extends Controller
     public function welcome()
     {
         $sections = Section::all();
-        $writers = User::where(['role' => 'writer', 'approved' => 1])->latest()->take(3)->get();
-        return view('welcome', ['sects' => $sections, 'writers' => $writers]);
+        $executives = Executive::all(); 
+        $writers = User::where(['role' => 'writer', 'approved' => 1])->latest()->take(4)->get();
+        
+        return view('welcome', ['sects' => $sections, 'writers' => $writers, 'executives' => $executives]);
     }
 
     public function about()
@@ -32,11 +35,9 @@ class GuestController extends Controller
 
     public function test(Request $request)
     {
-        $first = Order::where('user_id', 16)->first();  
-        if(!$first) {
-            return 'yes';
-        }
-        return 'no';
+        $first = Feedback::get();  
+        
+        return $first;
     }
 
     public function success(Request $request)

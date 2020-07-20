@@ -14,7 +14,7 @@ class MyMail extends Mailable
     public $subject;
     public $view;
     /**
-     * Create a new message instance.
+     * Create a new message instance. 
      *
      * @return void
      */
@@ -22,7 +22,7 @@ class MyMail extends Mailable
     {
         $this->details = $details;
         $this->subject = $subject;
-        $this->view = $view;
+        $this->view = $view; 
     }
 
     /**

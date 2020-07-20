@@ -14,42 +14,42 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="slide_text">
-                                    <h3>Trusted and<br>Professional Writers</h3>
+                                    <h3>Your Trusted and <br> professional copywriters</h3>
                                     <br>
-                                    <h4><span class="theme_color">25% referral bonus on their first job</span></h4>
+                                    <h4><span class="theme_color">We exude excellence via content</span></h4>
                                     <br>
-                                    <p>We exude excellence via content</p>
+                                    <!-- <p>We exude excellence via content</p> -->
                                     <a class="contact_bt" href="/about">About us</a>
                                 </div>
                                 <div class="slide_text2">
-                                    <h3>Trusted and Professional Writers</h3>
+                                    <h3>Your Trusted and <br> professional copywriters</h3>
                                     <br>
-                                    <h4><span class="theme_color">25% referral bonus on their first job</span></h4>
+                                    <h4><span class="theme_color">We exude excellence via content</span></h4>
                                     <br>
-                                    <p>We exude excellence via content</p>
+                                    <!-- <p>We exude excellence via content</p> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="pogoSlider-slide" style="background-image:url(/img/banner-img.png);">
+                <div class="pogoSlider-slide" style="background-image:url(/img/banner-img2.jpeg);">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="slide_text">
-                                    <h3>Trusted and<br>Professional Writers</h3>
+                                    <h3>Your Trusted and <br> professional copywriters</h3>
                                     <br>
-                                    <h4><span class="theme_color">25% referral bonus on their first job</span></h4>
+                                    <h4><span class="theme_color">We exude excellence via content</span></h4>
                                     <br>
-                                    <p>We exude excellence via content</p>
+                                    <!-- <p>We exude excellence via content</p> -->
                                     <a class="contact_bt" href="/about">About us</a>
                                 </div>
                                 <div class="slide_text2">
-                                    <h3>Trusted and Professional Writers</h3>
+                                    <h3>Your Trusted and <br> professional copywriters</h3>
                                     <br>
-                                    <h4><span class="theme_color">25% referral bonus on their first job</span></h4>
+                                    <h4><span class="theme_color">We exude excellence via content</span></h4>
                                     <br>
-                                    <p>We exude excellence via content</p>
+                                    <!-- <p>We exude excellence via content</p> -->
                                 </div>
                             </div>
                         </div>
@@ -62,6 +62,33 @@
 </div>
 <!-- End Banner -->
 
+<div class="section" style="padding-top: 75px;">
+    <div class="container">
+        <div class="refBorder neons">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+                            <div class="left">
+                            </div>
+                            <div class="right">
+                                <p class="small_tag">Referral</p>
+                                <h2><span class="theme_color">Referral</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin-top_30">
+                <div class="col-lg-12 ">
+                    <h3>Refer a client and get 25% of their first service fee!</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
 
 <!-- section -->
 <div class="section layout_padding">
@@ -74,11 +101,44 @@
                             <p class="section_count">01</p>
                         </div>
                         <div class="right">
-                            <p class="small_tag">About us</p>
-                            <h2><span class="theme_color">WE CAN</span> HELP YOU WRITE YOUR CONTENT</h2>
+                            <p class="small_tag"></p>
+                            <h2>Get Your <span class="theme_color">Money's Worth</span>, and More</h2>
                             <p class="large">Just in two steps</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top_30">
+            <div class="col-md-6">
+                <div>
+                    <h3 style="font-weight: bold;"><i style="color: green" class="fa fa-check-circle-o"></i> Enjoy Unlimited Review</h3>
+                    <p style="text-align: center;"> Clients satisfaction is our
+                        utmost priority. Thus, we afford
+                        you unlimited review on all
+                        services rendered.</p>
+                </div>
+                <div>
+                    <h3 style="font-weight: bold;"><i style="color: green" class="fa fa-check-circle-o"></i> Know the Price Up Front</h3>
+                    <p style="text-align: center;"> Our price tag for each service
+                        is standard and fixed. You get
+                        to know how much you're paying
+                        for a required service.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h3 style="font-weight: bold;"><i style="color: green" class="fa fa-check-circle-o"></i> 100% Charge Back</h3>
+                    <p style="text-align: center;"> If, in good faith, you feel
+                        unsatisfied with the required
+                        service rendered, you get to
+                        recover the sum paid for such.</p>
+                </div>
+                <div>
+                    <h3 style="font-weight: bold;"><i style="color: green" class="fa fa-check-circle-o"></i> 24/7 Customer Support</h3>
+                    <p style="text-align: center;"> Get the fastest response to all
+                        your complaints and enquiries, at
+                        any time!</p>
                 </div>
             </div>
         </div>
@@ -92,7 +152,17 @@
         <div class="row">
             <div class="col-lg-6 col-md-12 text_align_center padding_0">
                 <div class="full">
-                    <img class="img-responsive" src="img/img-2png.png" alt="#" />
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/img-2png.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/img-2.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <img class="img-responsive" src="img/img-2png.png" alt="#" /> -->
                 </div>
             </div>
 
@@ -132,14 +202,14 @@
 
             <div class="col-sm-6 col-md-4" onclick="redirect('order/{{$sect->url}}')">
                 <div class="service_blog">
-                    <div class="service_icons">
-                        <img width="75" height="75" src="img/icon-{{$sect->id}}.png" alt="#">
+                    <div class="service_icons" style="text-align: center;">
+                        <img width="75" style="color: green" height="75" src="img/icon-{{$sect->id}}.png" alt="#" class="saturate">
                     </div>
                     <div class="full">
                         <h4>{{$sect->title}}</h4>
                     </div>
                     <div class="full">
-                        <p>{{$sect->description}}</p>
+                        <p style="text-align: center;">{{$sect->description}}</p>
                         @if($sect->currency == 'cent')
                         <strong>Price: {{$sect->price}} cent per word </strong>
                         @else
@@ -154,7 +224,13 @@
 </div>
 <!-- end section -->
 
-
+<div class="section layout_padding">
+    <div class="container">
+        <div class="row" >
+            <img src="img/cac.jpg" class="cac"> 
+        </div>
+    </div>
+</div>
 
 <!-- section -->
 <div class="section layout_padding dark_bg">
@@ -167,7 +243,7 @@
                             <p class="section_count">03</p>
                         </div>
                         <div class="right">
-                            <h2>Create <span class="theme_color">PERSONALISED Writeup</h2>
+                            <h2><span class="theme_color">About Us</span></h2>
                             <p class="large">What we've done</p>
                         </div>
                     </div>
@@ -188,22 +264,29 @@
             <div class="col-sm-12 col-md-4">
                 <div class="counter margin-top_30">
 
-                    <h2 class="timer count-title count-number" data-to="23" data-speed="1500"></h2>
-                    <p class="count-text">NOMINATIONS</p>
+                    <h2 class="timer count-title count-number" data-to="712" data-speed="1500"></h2>
+                    <p class="count-text">PROJECTS</p>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4">
                 <div class="counter margin-top_30">
 
-                    <h2 class="timer count-title count-number" data-to="7" data-speed="1500"></h2>
+                    <h2 class="timer count-title count-number" data-to="5" data-speed="1500"></h2>
                     <p class="count-text">AWARDS</p>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4">
                 <div class="counter margin-top_30">
 
-                    <h2 class="timer count-title count-number" data-to="31" data-speed="1500"></h2>
-                    <p class="count-text">AGENCIES</p>
+                    <h2 class="timer count-title count-number" data-to="5" data-speed="1500"></h2>
+                    <p class="count-text">SEMINARS</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="counter margin-top_30">
+
+                    <h2 class="timer count-title count-number" data-to="11" data-speed="1500"></h2>
+                    <p class="count-text">CORPORATE CLIENTS</p>
                 </div>
             </div>
         </div>
@@ -238,26 +321,26 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
-                                @foreach($writers as $writer)
+                                @foreach($executives as $executive)
 
                                 <div class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="full">
                                         <div class="full team_member_img text_align_center">
-                                            <img src="{{ $writer->picture ? env('ADMIN_URL').'/storage/'.$writer->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
-                                            <div class="social_icon_team">
-                                                <ul class="social_icon">
-                                                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                </ul>
-                                            </div>
+                                            <img src="/img/executives/{{ $executive->image_url }}" alt="#" />
+                                            <!--<div class="social_icon_team">-->
+                                            <!--    <ul class="social_icon">-->
+                                            <!--        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>-->
+                                            <!--        <li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+                                            <!--        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>-->
+                                            <!--        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+                                            <!--    </ul>-->
+                                            <!--</div>-->
                                         </div>
                                         <div class="full text_align_center">
-                                            <h3>{{ $writer->last_name }} {{ $writer->first_name }}</h3>
+                                            <h3>{{ $executive->name }}</h3>
                                         </div>
                                         <div class="full text_align_center">
-                                            <p>{{ $writer->email }}</p>
+                                            <p>{{ $executive->role }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -266,37 +349,14 @@
 
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <!-- <div class="carousel-item">
                             <div class="row">
 
-                                @foreach($writers as $writer)
-
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <div class="full">
-                                        <div class="full team_member_img text_align_center">
-                                            <img src="{{ $writer->picture ? env('ADMIN_URL').'/storage/'.$writer->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
-                                            <div class="social_icon_team">
-                                                <ul class="social_icon">
-                                                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="full text_align_center">
-                                            <h3>{{ $writer->last_name }} {{ $writer->first_name }}</h3>
-                                        </div>
-                                        <div class="full text_align_center">
-                                            <p>{{ $writer->email }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                @endforeach
+                                
+                               
 
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="bullets">
                         <!-- Indicators -->
@@ -315,7 +375,7 @@
 <!-- end section -->
 
 <!-- section -->
-<div class="section layout_padding">
+<div class="section layout_padding dark_bg">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -334,7 +394,7 @@
         </div>
         <div class="row margin-top_30">
             <div class="col-lg-12 margin-top_30">
-                <div id="team_slider" class="carousel slide" data-ride="carousel">
+                <div id="team_slider" class="carousel slide" data-ride="carousel" data-interval="3000">
 
                     <!-- The slideshow -->
                     <div class="carousel-inner">
@@ -345,10 +405,10 @@
                                 <div class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="full">
                                         <div class="full team_member_img text_align_center">
-                                            <img src="{{ $writer->picture ? env('ADMIN_URL').'/storage/'.$writer->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
+                                            <img src="{{ $writer->picture ? env('ADMIN_URL').'/admin_content/profile_img/'.$writer->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
 
                                         </div>
-                                        <div class="full text_align_center">
+                                        <div class="full text_align_center white_fonts">
                                             <h3>{{ $writer->last_name }} {{ $writer->first_name }}</h3>
                                         </div>
                                         <div class="full text_align_center">
@@ -369,10 +429,10 @@
                                 <div class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="full">
                                         <div class="full team_member_img text_align_center">
-                                            <img src="{{ $writer->picture ? env('ADMIN_URL').'/storage/'.$writer->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
+                                            <img src="{{ $writer->picture ? env('ADMIN_URL').'/admin_content/profile_img/'.$writer->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
 
                                         </div>
-                                        <div class="full text_align_center">
+                                        <div class="full text_align_center white_fonts">
                                             <h3>{{ $writer->last_name }} {{ $writer->first_name }}</h3>
                                         </div>
                                         <div class="full text_align_center">
@@ -402,5 +462,43 @@
 </div>
 <!-- end section -->
 
+<!-- Section -->
+<div class="section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="heading_main text_align_left">
+                        <div class="left">
+                            <p class="section_count">06</p>
+                        </div>
+                        <div class="right">
+                            <p class="small_tag"></p>
+                            <h2><span class="theme_color">Find premium contents for your business today</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top_30">
+            <div class="col-lg-12 margin-top_30">
+                <h1>We've got the right plug to your audience's heart</h1>
+            </div>
+            <div class="col-lg-12" style="text-align: center">
+                <div class="full">
+                    <a href="/login" class="started">Get Started ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- modal -->
+@guest
+@else
+
+@endguest
 
 @endsection()
+

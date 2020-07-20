@@ -30,7 +30,7 @@
                             <a href="/change_password">Change Password</a>
                             <a href="/withdrawal">Withdraw</a>
                             <a href="/bank_details">@if(Auth::User()->account_number == null) Add @else Edit @endif Bank Details</a>
-                        </div>
+                        </div> 
                         <div class="col-sm-4 col-md-3">
                             <img src="/assets/images/avatars/2.jpg" height="220px" alt="" class="img-rounded img-responsive" />
                         </div>
@@ -45,10 +45,12 @@
                                 <br />
                             </p>
                             <?php $ref = env('APP_URL') . "/register?referral=" . Auth::User()->referralcode ?>
+                            
+                            
                             <p>Wallet: $ {{ Auth::User()->wallet }} </p>
-                            <p>Referral link: {{ env('APP_URL')}}/register?referral={{ Auth::User()->referralcode}} 
+                            <p>Referral link: {{ $ref }}
                                 <img src="/img/copy.png" width="27px" onclick="copy('{{$ref}}')" /></p>
-
+                                <input value="{{ $ref }}" id="copy" style="opacity: 0;" />
                             <!-- Split button -->
                             <!-- <button onclick="redirect('/edit_profile')" class="btn btn-primary">Edit Profile</button>
                             <button onclick="redirect('/change_password')" class="btn btn-primary">Change Password</button>
@@ -84,7 +86,64 @@
 </div>
 <!-- end section -->
 
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Referral code</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <?php $ref = env('APP_URL') . "/register?referral=" . Auth::User()->referralcode ?>
+            <div class="modal-body">
+                <p>You referral code is {{ $ref }}</p>
+            </div>
+            <div class="modal-footer">
+                <input value="{{ $ref }}" id="copy" style="opacity: 0;" />
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="copy('{{$ref}}')">Copy</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
+<div class="modal" id="regModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <p>Registration Successful. Enjoy our service</p>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection()
+
+@section('scripts')
+@guest
+@else
+
+@if(session()->has('code') && session()->get('code') == 1)
+<script>
+    $(document).ready(function() {
+        $('#myModal').modal('show')
+    })
+</script>
+@endif
+
+@if(session()->has('register') && session()->get('register') == 1)
+<script>
+    $(document).ready(function() {
+        $('#regModal').modal('show')
+    })
+</script>
+@endif
+@endguest
+@endsection('scripts')

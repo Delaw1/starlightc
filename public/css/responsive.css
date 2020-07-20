@@ -291,7 +291,7 @@
     .contact_bt {
         width: 90px;
         height: 35px;
-        background: #07528d;
+        background: #25D366;
         color: #fff;
         float: left;
         line-height: 36px;
@@ -299,6 +299,12 @@
         font-size: 14px;
         font-weight: 300;
         margin-top: 5px;
+    }
+
+    .started {
+        background: #25D366;
+        color: #fff;
+        float: none;
     }
     .top-header #navbar-wd {
         padding-right: 0;
