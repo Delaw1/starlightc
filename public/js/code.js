@@ -10,6 +10,15 @@ function removeTimes(n) {
     $('.times:eq(' + n + ')').addClass('hidden')
 }
 
+function reply(id) {
+    var x = document.getElementById("reply_"+id)
+    if(x.style.display === "none") {
+        x.style.display = "block"
+    } else {
+        x.style.display = "none"
+    }
+}
+
 function calculatePrice(word, price) {
     if (word == '') {
         totalPrice = '$ 0'

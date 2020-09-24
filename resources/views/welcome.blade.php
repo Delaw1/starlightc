@@ -227,7 +227,7 @@
 <div class="section layout_padding">
     <div class="container">
         <div class="row" >
-            <img src="img/cac.jpg" class="cac"> 
+            <img src="img/cac.jpg" class="cac">
         </div>
     </div>
 </div>
@@ -392,56 +392,124 @@
                 </div>
             </div>
         </div>
+        <?php 
+            $num = count($writers)/6;
+        ?>
         <div class="row margin-top_30">
             <div class="col-lg-12 margin-top_30">
-                <div id="team_slider" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <div id="team_slider" class="carousel slide" data-ride="carousel" data-interval="2000">
 
                     <!-- The slideshow -->
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        @for($j=0;$j<=$num;$j++)
+                        <div class="carousel-item <?php if($j == 0) {echo 'active';};?>">
                             <div class="row">
-                                @foreach($writers as $writer)
+                                @if($j != $num-1)
+                                @for($i=$j*5;$i<=($j*5)+5;$i++)
 
                                 <div class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="full">
                                         <div class="full team_member_img text_align_center">
-                                            <img src="{{ $writer->picture ? env('ADMIN_URL').'/admin_content/profile_img/'.$writer->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
+                                            <img src="{{ $writers[$i]->picture ? env('ADMIN_URL').'/admin_content/profile_img/'.$writers[$i]->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
 
                                         </div>
                                         <div class="full text_align_center white_fonts">
-                                            <h3>{{ $writer->last_name }} {{ $writer->first_name }}</h3>
+                                            <h3>{{ $writers[$i]->last_name }} {{ $writers[$i]->first_name }}</h3>
                                         </div>
                                         <div class="full text_align_center">
                                             <p></p>
                                         </div>
                                     </div>
                                 </div>
+                                @endfor
+                                @else
+                                @for($i=$j*5;$i<=count($writers);$i++)
 
-                                @endforeach
+                                <div class="col-lg-4 col-md-4 col-sm-12">
+                                    <div class="full">
+                                        <div class="full team_member_img text_align_center">
+                                            <img src="{{ $writers[$i]->picture ? env('ADMIN_URL').'/admin_content/profile_img/'.$writers[$i]->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
+
+                                        </div>
+                                        <div class="full text_align_center white_fonts">
+                                            <h3>{{ $writers[$i]->last_name }} {{ $writers[$i]->first_name }}</h3>
+                                        </div>
+                                        <div class="full text_align_center">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endfor
+                                @endif
+
+                            </div>
+                        </div>
+                        @endfor
+                        <div class="carousel-item active">
+                            <div class="row">
+                                @for($i=0;$i<=5;$i++)
+
+                                <div class="col-lg-4 col-md-4 col-sm-12">
+                                    <div class="full">
+                                        <div class="full team_member_img text_align_center">
+                                            <img src="{{ $writers[$i]->picture ? env('ADMIN_URL').'/admin_content/profile_img/'.$writers[$i]->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
+
+                                        </div>
+                                        <div class="full text_align_center white_fonts">
+                                            <h3>{{ $writers[$i]->last_name }} {{ $writers[$i]->first_name }}</h3>
+                                        </div>
+                                        <div class="full text_align_center">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endfor
 
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="row">
 
-                                @foreach($writers as $writer)
+                                @for($i=5;$i<=10;$i++)
 
                                 <div class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="full">
                                         <div class="full team_member_img text_align_center">
-                                            <img src="{{ $writer->picture ? env('ADMIN_URL').'/admin_content/profile_img/'.$writer->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
+                                            <img src="{{ $writers[$i]->picture ? env('ADMIN_URL').'/admin_content/profile_img/'.$writers[$i]->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
 
                                         </div>
                                         <div class="full text_align_center white_fonts">
-                                            <h3>{{ $writer->last_name }} {{ $writer->first_name }}</h3>
+                                            <h3>{{ $writers[$i]->last_name }} {{ $writers[$i]->first_name }}</h3>
                                         </div>
                                         <div class="full text_align_center">
                                             <p></p>
                                         </div>
                                     </div>
                                 </div>
+                                @endfor
 
-                                @endforeach
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                @for($i=10;$i<=15;$i++)
+
+                                <div class="col-lg-4 col-md-4 col-sm-12">
+                                    <div class="full">
+                                        <div class="full team_member_img text_align_center">
+                                            <img src="{{ $writers[$i]->picture ? env('ADMIN_URL').'/admin_content/profile_img/'.$writers[$i]->picture : '/assets/images/avatars/1.jpg'}}" alt="#" />
+
+                                        </div>
+                                        <div class="full text_align_center white_fonts">
+                                            <h3>{{ $writers[$i]->last_name }} {{ $writers[$i]->first_name }}</h3>
+                                        </div>
+                                        <div class="full text_align_center">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endfor
 
                             </div>
                         </div>
@@ -451,6 +519,7 @@
                         <ul class="carousel-indicators">
                             <li data-target="#team_slider" data-slide-to="0" class="active"></li>
                             <li data-target="#team_slider" data-slide-to="1"></li>
+                            <li data-target="#team_slider" data-slide-to="2"></li>
                         </ul>
                     </div>
 

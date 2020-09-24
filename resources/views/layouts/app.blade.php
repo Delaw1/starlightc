@@ -68,6 +68,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                     <ul class="navbar-nav">
                         <li id="terms"><a class="nav-link active" href="/">Home</a></li>
+                        <li id="terms"><a class="nav-link active" href="/blog">Blog</a></li>
                         <li id="terms"><a class="nav-link" href="/about">About us</a></li>
                         <li id="terms"><a class="nav-link" href="/#services">Services</a></li>
                         @guest

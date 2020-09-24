@@ -52,7 +52,9 @@ Route::post('/bank_details', 'HomeController@bankDeatilsPost');
 
 // Blog 
 Route::get('/blog', 'BlogController@getPosts');
-
+Route::get('/blog/{id}', 'BlogController@getPost');
+Route::post('/submitComment', 'BlogController@submitComment');
+Route::post('/submitReply', 'BlogController@submitReply');
 
 
 // Writer route
